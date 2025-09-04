@@ -1,12 +1,20 @@
+import "./globals.css";
+
 export const metadata = {
-  title: "NextJS + Redis Q and A Demo",
-  description: "Minimal demo showing cache, sessions, rate limits, and live updates"
+  title: "Next.js + Redis Q&A Demo",
+  description:
+    "Live Q&A showcasing Redis caching, sessions, rate limits, and realtime",
+  viewport: "width=device-width, initial-scale=1, maximum-scale=1",
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body style={{ fontFamily: "ui-sans-serif, system-ui, Arial" }}>{children}</body>
+      <body className="app-root dark-only">{children}</body>
     </html>
   );
 }
